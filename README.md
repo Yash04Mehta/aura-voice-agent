@@ -3,7 +3,7 @@
 A browser-based voice customer-support agent for a fictional D2C skincare brand. Click **Start Call**, talk to **Aria** through your microphone, and she answers out loud: tracking orders, explaining policies, cancelling eligible orders and politely refusing what policy doesn't allow. When the call ends you get a full transcript and a structured JSON outcome.
 
 - **Live demo:** `https://aura-voice-agent-ruddy.vercel.app/`
-- **Demo video:** `<your video link>`
+- **Demo video:** `https://drive.google.com/file/d/18iyWIGu2CgSmxsxDTMhiBhtiXyOOW3qS/view?usp=sharing`
 
 **Approach in brief:** I used Google's Gemini Live API, a single speech-to-speech model, so audio streams directly between the browser and the model with no separate STT and TTS hops, which keeps replies fast and lets the customer interrupt naturally. A small Next.js backend holds the API key, mints short-lived session tokens, and owns the order data and policy rules. Aria never decides on her own whether a return or cancellation is allowed: she calls a tool, and deterministic code returns the verdict she must follow.
 
